@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import {useMap,Marker,Popup} from "react-leaflet"
 import Icon from './Icon'
 import { useEffect } from 'react'
 const Markerx = (props) => {
-    const position = [props.data.location.lat,props.data.location.lng]
+    const position =useMemo(()=>{
+      return [props.data.location.lat,props.data.location.lng]
+    },[props.data.location.lat,props.data.location.lng])
     const map = useMap()
 
     useEffect(()=>{
