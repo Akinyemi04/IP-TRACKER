@@ -1,0 +1,119 @@
+*{
+  box-sizing: border-box;
+  padding:  0 0 ;
+  margin: 0 0 ;
+}
+body{
+  overflow: hidden;
+}
+.home{
+  width: 100vw;
+  main{
+    width: 100vw;
+    padding-top: 4vh;
+    height: 40vh;
+    background-image: url('./Components/images/pattern-bg.png');
+    background-size: contain;
+    color: white;
+    h1{
+      margin-bottom: 3vh;
+    }
+    .div{
+      margin: auto;
+      width: 35vw;
+      display: flex;
+      border: none;
+      input{
+        width: 30vw;
+        height: 6.5vh;
+        border-top-left-radius: 1.3vw;
+        border-bottom-left-radius: 1.3vw;
+        padding-left:2vw ;
+        font-size: 16px;
+        border: 1px solid white;
+        outline: none;
+      }
+      span{
+        width: 5vw;
+        height: 6.5vh;
+        background-color: black;
+        border-top-right-radius: 1.3vw;
+        border-bottom-right-radius: 1.3vw;
+        position: relative;
+        cursor: pointer;
+        img{
+          position: absolute;
+          top: 2vh;
+          left: 2.2vw;
+          height: 2.5vh;
+        }
+      }
+      span:hover{
+        opacity: 0.5;
+      }
+    }
+    aside{
+      width: 70vw;
+      min-height: 16vh;
+      margin: auto;
+      background-color: white;
+      color: black;
+      position: relative;
+      top: 8vh;
+      display: flex;
+      padding-left:0.4vw ;
+      padding-top: 2vh;
+      padding-bottom: 2vh;
+      border-radius:2vw ;
+      z-index: 10000;
+      section{
+        width: 23.3vw;
+        padding-left: 2vw;
+        padding-right: 1.3vw;
+        border-right: 1px solid rgb(172, 166, 166);
+        h6{
+          margin-top: 1.4vh;
+          font-family: 'Times New Roman', Times, serif;
+          color: rgb(136, 132, 132);
+          font-weight: 800;
+          margin-bottom: 2vh;
+        }
+        span{
+          width: 14vw;
+          //white-space: wrap;
+          overflow-wrap: break-word;
+          font-size: larger;
+          color: black;
+          font-weight: bold;
+        }
+      }
+      .last{
+        border-right: none;
+      }
+    }
+  }
+}
+@media screen and(max-width:'550px') {
+  .home{
+    main{
+      .div{
+        width: 85vw;
+        input{
+          width: 75vw;
+        }
+        span{
+          width: 10vw;
+        }
+      }
+      aside{
+        flex-direction: column;
+        top: 3vh;
+        section{
+          width: inherit;
+          text-align: center;
+          border-right: none;
+        }
+      }
+    }
+  }
+}
